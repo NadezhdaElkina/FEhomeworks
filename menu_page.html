@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About company</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      min-height: 100%;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 200px;
+      background: gray;
+      transform: translateX(-200px);
+    }
+    .sidebar--open {
+      transform: translateX(0);
+      transition: 1s;
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("sidebar--open");
+    }
+  </script>
+
+  <body>
+    <aside class="sidebar"></aside>
+
+    <div class="header">
+      <h1>About company</h1>
+
+      <button onclick="toggleMenu()">Menu</button>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quos,
+      quod iusto eos modi corrupti soluta quam enim voluptatum earum ad fugit!
+      Ipsa praesentium impedit cupiditate sint quasi minus ratione ea earum illo
+      numquam repellat dignissimos tempore vero, perspiciatis deserunt commodi
+      dolore saepe iure et illum quae enim. Voluptatem sed maiores assumenda
+      provident. Quam maiores aliquam dignissimos reiciendis labore officia
+      tenetur voluptatum? Saepe quod illum mollitia corrupti accusamus?
+      Similique doloribus laborum vitae aperiam distinctio possimus est velit
+      autem at voluptatibus fuga ipsam impedit, magni recusandae exercitationem
+      nobis, placeat dolorem? Veniam vel veritatis exercitationem amet harum
+      itaque doloribus eveniet eligendi ut?
+    </p>
+  </body>
+</html>
