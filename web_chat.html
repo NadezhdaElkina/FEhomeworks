@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inbox menu</title>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      .wrapper {
+        height: 100%;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .sidebar {
+        background: #f3f5f7;
+        width: 220px;
+        padding: 17px;
+      }
+      .inbox {
+        background: #ffffff;
+        width: 270px;
+      }
+      .chat {
+        background: #f9f9f9;
+        width: calc(100% - 530px);
+      }
+      .actions {
+        background: #ffffff;
+        width: 70px;
+      }
+      .inbox,
+      .chat,
+      .actions {
+        outline: 2px solid #e0e1e5;
+      }
+      .sidebar,
+      .sidebar--top,
+      .sidebar--menu,
+      .projects,
+      .projects--items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .sidebar--top {
+        gap: 60px;
+      }
+      .sidebar--top--logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 6px;
+      }
+      .logo {
+        height: 40px;
+      }
+      .sidebar--menu--item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+      }
+      .sidebar--menu {
+        gap: 23px;
+        list-style: none;
+      }
+      .sidebar--top--title {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .sidebar--menu--link {
+        text-decoration: none;
+        color: #303234;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .sidebar--menu--icon {
+        color: #8b9099;
+        font-size: 22px;
+      }
+      .projects {
+        gap: 20px;
+      }
+      .projects--items {
+        gap: 12px;
+      }
+      .projects--title {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 400;
+        color: #8b9099;
+      }
+      .projects--icon {
+        border: 2px solid;
+        padding: 7px;
+        border-radius: 35%;
+      }
+      .project--item--subtitle,
+      .projects--item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .project--item--subtitle {
+        gap: 15px;
+      }
+      .projects--icon--red {
+        color: #cf694e;
+      }
+      .projects--icon--blue {
+        color: #5189dc;
+      }
+      .projects--icon--purple {
+        color: #5730bd;
+      }
+      .projects--icon--green {
+        color: #8fb9a6;
+      }
+      .projects--subtitle {
+        font-size: 10px;
+        font-weight: 500;
+      }
+      .project--notifications {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .projects--notification {
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 500;
+        color: #8b9099;
+        border: none solid;
+        border-radius: 25%;
+        background-color: #e7e9ef;
+        height: 23px;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .projects--button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        font-size: 10px;
+        font-weight: 600;
+        color: #303234;
+        padding: 6px 35px;
+        border-radius: 12px;
+        border: 2px solid #e7e9ef;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <div class="sidebar--top">
+          <div class="sidebar--top--logo">
+            <img src="images/Shark-logo.svg" alt="" class="logo" />
+            <h3 class="sidebar--top--title">Shark</h3>
+          </div>
+
+          <menu class="sidebar--menu">
+            <li class="sidebar--menu--item">
+              <span class="sidebar--menu--icon">
+                <i class="lab la-buffer"></i>
+              </span>
+              <a class="sidebar--menu--link" href="https://example.org">Dashboard</a>
+            </li>
+            <li class="sidebar--menu--item">
+              <span class="sidebar--menu--icon">
+                <i class="las la-poll"></i>
+              </span>
+              <a class="sidebar--menu--link" href="https://example.org"> Statistic </a>
+            </li>
+            <li class="sidebar--menu--item">
+              <span class="sidebar--menu--icon">
+                <i class="las la-comment-alt"></i>
+              </span>
+              <a class="sidebar--menu--link" href="https://example.org"> Support </a>
+            </li>
+            <li class="sidebar--menu--item">
+              <span class="sidebar--menu--icon">
+                <i class="las la-envelope"></i>
+              </span>
+              <a class="sidebar--menu--link" href="https://example.org"> Inbox </a>
+            </li>
+            <li class="sidebar--menu--item">
+              <span class="sidebar--menu--icon">
+                <i class="las la-rocket"></i>
+              </span>
+              <a class="sidebar--menu--link" href="https://example.org"> Goals </a>
+            </li>
+            <li class="sidebar--menu--item">
+              <span class="sidebar--menu--icon">
+                <i class="las la-link"></i>
+              </span>
+              <a class="sidebar--menu--link" href="https://example.org"> Links </a>
+            </li>
+          </menu>
+        </div>
+
+        <div class="projects">
+
+          <h4 class="projects--title">projects</h4>
+
+          <div class="projects--items">
+            <div class="projects--item">
+              <div class="project--item--subtitle">
+                <span class="projects--icons">
+                  <p class="projects--icon projects--icon--red"></p>
+                </span>
+                <h5 class="projects--subtitle">Callipso</h5>
+              </div>
+              <div class="project--notifications">
+                <a class="projects--notification" href="https://example.org">+4</a>
+              </div>
+            </div>
+
+            <div class="projects--item">
+              <div class="project--item--subtitle">
+                <span class="projects--icons">
+                  <p class="projects--icon projects--icon--blue"></p>
+                </span>
+                <h5 class="projects--subtitle">BWS bank</h5>
+              </div>
+              <div class="project--notifications">
+                <a class="projects--notification" href="https://example.org">+5</a>
+              </div>
+            </div>
+
+            <div class="projects--item">
+              <div class="project--item--subtitle">
+                <span class="projects--icons">
+                  <p class="projects--icon projects--icon--purple"></p>
+                </span>
+                <h5 class="projects--subtitle">Unicorn app</h5>
+              </div>
+              <div class="project--notifications">
+                <a class="projects--notification" href="https://example.org">+1</a>
+              </div>
+            </div>
+
+            <div class="projects--item">
+              <div class="project--item--subtitle">
+                <span class="projects--icons">
+                  <p class="projects--icon projects--icon--green"></p>
+                </span>
+                <h5 class="projects--subtitle">Salt</h5>
+              </div>
+              <div class="project--notifications">
+                <a class="projects--notification" href="https://example.org">+3</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects--button">
+            <button class="button">Show more</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="inbox"></div>
+      <div class="chat"></div>
+      <div class="actions"></div>
+    </div>
+  </body>
+</html>
