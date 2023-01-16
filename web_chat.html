@@ -35,16 +35,17 @@
         padding: 17px;
       }
       .inbox {
-        background: #ffffff;
-        width: 270px;
+        background: #f4f6f8;
+        width: 350px;
       }
       .chat {
-        background: #f9f9f9;
-        width: calc(100% - 530px);
+        background: #f4f6f8;
+        width: calc(100% - 650px);
+        padding: 20px;
       }
       .actions {
-        background: #ffffff;
-        width: 70px;
+        background: #fff;
+        width: 80px;
       }
       .inbox,
       .chat,
@@ -77,6 +78,9 @@
         justify-content: flex-start;
         align-items: center;
         gap: 15px;
+        border: none;
+        width: 100%;
+        cursor: pointer;
       }
       .sidebar--menu {
         gap: 23px;
@@ -170,6 +174,418 @@
         border-radius: 12px;
         border: 2px solid #e7e9ef;
         width: 100%;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: #f4f6f8;
+      }
+      .inbox {
+        background: #ffffff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 25px;
+      }
+      .inbox--title {
+        display: flex;
+        justify-content: space-between;
+      }
+      .title--text {
+        font-weight: 500;
+        font-size: 25px;
+        color: #35373b;
+      }
+      .title--button {
+        cursor: pointer;
+        border: 1px solid #f0f0f0;
+        background: none;
+        display: flex;
+        width: 35px;
+        font-weight: 300;
+        font-size: 20px;
+        aspect-ratio: 1;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+      .title--button:hover {
+        background: #f3f5f7;
+      }
+      .inbox--switch {
+        background: #f3f5f7;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px;
+      }
+      .switch--button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30px;
+        aspect-ratio: 4;
+        border-radius: 10px;
+        border: none;
+        background: #f3f5f7;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 600;
+      }
+      .switch--button:hover {
+        background: #fff;
+      }
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3px;
+      }
+      .contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 10px;
+        border-radius: 15px;
+        border-bottom: 2px solid #f3f5f7;
+      }
+      .contact:hover {
+        background: #f3f5f7;
+      }
+      .contact--info {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+      }
+      .avatar--image {
+        border-radius: 35%;
+      }
+      .avatar {
+        position: relative;
+        width: 50px;
+        aspect-ratio: 1;
+        line-height: 0;
+      }
+      .avatar--indicator__active {
+        border-radius: 50%;
+        position: absolute;
+        background: #59cd5d;
+        height: 12px;
+        aspect-ratio: 1;
+        display: inline-block;
+        right: 2px;
+        bottom: 13px;
+        border: 2px solid white;
+      }
+      .contact--title {
+        font-size: 15px;
+        color: #303234;
+        font-weight: 500;
+      }
+      .contact--subtitle {
+        font-size: 12px;
+        font-weight: 400;
+        color: #b4babd;
+      }
+      .contact--message {
+        font-size: 12px;
+        font-weight: 500;
+        color: #5f6163;
+      }
+      .update--indicator__active {
+        border-radius: 50%;
+        background: #4a6ada;
+        width: 17px;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+      .indicator--value {
+        font-weight: 500;
+        font-size: 10px;
+      }
+      .current-contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+      .current-contact--info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+      }
+      .current-contact--avatar {
+        position: relative;
+        width: 40px;
+        aspect-ratio: 1;
+        line-height: 0;
+      }
+      .current-contact--image {
+        border-radius: 50%;
+      }
+      .current-contact--indicator {
+        border-radius: 50%;
+        position: absolute;
+        background: #59cd5d;
+        height: 12px;
+        aspect-ratio: 1;
+        display: inline-block;
+        right: 1px;
+        bottom: 0px;
+        border: 2px solid white;
+      }
+      .current-contact--name {
+        font-size: 15px;
+        color: #303234;
+        font-weight: 500;
+      }
+      .current-contact--status {
+        font-size: 12px;
+        font-weight: 400;
+        color: #b4babd;
+      }
+      .chat--options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+      }
+      .chat--search {
+        background: #f3f5f7;
+        border-radius: 8px;
+        padding: 5px 8px;
+        display: flex;
+        justify-content: space-between;
+        outline: 2px solid #eceef0;
+        height: 27px;
+      } 
+      .chat--input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 12px;
+        font-weight: 400;
+        color: #b4babd;
+      }
+      .chat--input--button {
+        border: none;
+        background: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: #949ba5;
+      }
+      .chat--input--icon {
+        font-size: 15px;
+        
+      }
+      .chat--search:hover {
+        background: #fff;
+      }
+      .chat--input:hover {
+        background: #fff;
+      }
+      .chat--input--button:hover {
+        background: #fff;
+      }
+      .option-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        aspect-ratio: 1;
+        border: 2px solid #f0f2f3;
+        border-radius: 30%;
+        background: none;
+        font-size: 15px;
+        color: #949ba5;
+        cursor: pointer;
+      }
+      .option-button:hover {
+        background: #f3f5f7;
+      }
+      .chat--messages {
+       border-top: 2px solid #e9e9e9;
+       padding: 15px 0px 40px 0px;
+      }
+      .date {
+        font-size: 15px;
+        font-weight: 400;
+        color: #949ba5;
+      }
+      .outgoing--block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .outgoing--info,
+      .outgoing--message {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .outgoing--messages {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+      }
+      .incoming--block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .incoming--messages {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .incoming--info,
+      .incoming--message {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .outgoing--text,
+      .incoming--text {
+        font-size: 12px;
+        font-weight: 400;
+        color: #303234;
+      }       
+      .message--time,
+      .message--status {
+        color: #cacdcd;
+        font-size: 10px;
+        font-weight: 500;
+        margin: 5px 0px;
+      }
+      .audio-timing {
+        font-size: 10px;
+        font-weight: 500;
+        color: #303234;
+      }
+      .outgoing--message,
+      .incoming--message {
+        padding: 10px 15px;
+        gap: 5px;
+      }
+      .incoming--message {
+        border-radius: 10px 10px 10px 0px;
+        background-color: #e5e6e8;
+      }
+      .outgoing--message {
+        border-radius: 10px 10px 0px 10px;
+        background: #fff;
+      }
+      .document--icon {
+        color: #4a6ada;
+        font-size: 20px;
+      }
+      .dokument--title {
+        font-size: 10px;
+        font-weight: 600;
+        color: #4a6ada;
+      }
+      .document--wage {
+        font-size: 8px;
+        font-weight: 500;
+        color: #bbbfc8;
+      }
+      .input--form {
+        width: 300px;
+      }
+      .message--input {
+        width: 100%;
+        height: 27px;
+        border: none;
+        outline: none;
+        background: none;
+        color: #b4babd;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .message--button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        aspect-ratio: 1;
+        border-radius: 30%;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+      }
+      .message--button__blue {
+        background: #4a6ada;
+        color: #fff;
+      }
+      .message--button__normal {
+        background-color: #e7e9ef;
+        color: #949ba5;
+      }
+      .message--button__normal:hover {
+         background: #fff;
+      }
+      .message--button__blue:hover {
+        background: #3153d0;
+      }
+      .current--message {
+        height: 120px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        border-top: 2px solid #e9e9e9;
+        height: 100px;
+      }
+      .message--functions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      .actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 20px;
+      }
+      .actions--buttom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+      }
+      .actions--button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        aspect-ratio: 1;
+        border: 1px solid #f1f0f3;
+        background: none;
+        border-radius: 30%;
+        width: 30px;
+        aspect-ratio: 1;
+        font-size: 15px;
+        font-weight: bold;
+        color: #949ba5;
+        cursor: pointer;
+      }
+      .actions--button:hover {
+        background: #f3f5f7;
       }
     </style>
   </head>
@@ -301,9 +717,366 @@
         </div>
       </aside>
 
-      <div class="inbox"></div>
-      <div class="chat"></div>
-      <div class="actions"></div>
+      <div class="inbox">
+        <div class="inbox--title">
+          <h4 class="title--text">Inbox</h4>
+          <button class="title--button">+</button>
+        </div>
+
+        <div class="inbox--switch">
+          <button class="switch--button switch--button__active">General</button>
+          <button class="switch--button">Total</button>
+        </div>
+
+        <div class="contacts">
+          <div class="contact contact--new">
+            <div class="contact--info">
+              <figure class="avatar">
+                <img
+                  class="avatar--image"
+                  src="https://via.placeholder.com/50
+                 "
+                  alt=""
+                />
+                <span class="avatar--indicator avatar--indicator__active"></span>
+              </figure>
+              <figcaption class="contact--content">
+                <h5 class="contact--title">Michael.B</h5>
+                <h6 class="contact--subtitle">Project manager</h6>
+                <p class="contact--message">Sent you the file</p>
+              </figcaption>
+            </div>
+            <div class="update--indicator update--indicator__active">
+              <p class="indicator--value">2</p>
+            </div>
+          </div>
+
+          <div class="contact contact--new">
+            <div class="contact--info">
+              <figure class="avatar">
+                <img
+                  class="avatar--image"
+                  src="https://via.placeholder.com/50
+                 "
+                  alt=""
+                />
+                <span class="avatar--indicator avatar--indicator__active"></span>
+              </figure>
+              <figcaption class="contact--content">
+                <h5 class="contact--title">Katie.W</h5>
+                <h6 class="contact--subtitle">Middle designer</h6>
+                <p class="contact--message">See you tomorrow</p>
+              </figcaption>
+            </div>
+            <div class="update--indicator update--indicator__active">
+              <p class="indicator--value">3</p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact--info">
+              <figure class="avatar">
+                <img
+                  class="avatar--image"
+                  src="https://via.placeholder.com/50
+                 "
+                  alt=""
+                />
+                <span class="avatar--indicator"></span>
+              </figure>
+              <figcaption class="contact--content">
+                <h5 class="contact--title">Arnold.J</h5>
+                <h6 class="contact--subtitle">Project manager</h6>
+                <p class="contact--message">Hi &#128075 I checked the layout agai..</p>
+              </figcaption>
+            </div>
+            <div class="update--indicator">
+              <p class="indicator--value"></p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact--info">
+              <figure class="avatar">
+                <img
+                  class="avatar--image"
+                  src="https://via.placeholder.com/50
+                 "
+                  alt=""
+                />
+                <span class="avatar--indicator avatar--indicator__active"></span>
+              </figure>
+              <figcaption class="contact--content">
+                <h5 class="contact--title">Fannie.K</h5>
+                <h6 class="contact--subtitle">HR manager</h6>
+                <p class="contact--message">okay!</p>
+              </figcaption>
+            </div>
+            <div class="update--indicator">
+              <p class="indicator--value"></p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact--info">
+              <figure class="avatar">
+                <img
+                  class="avatar--image"
+                  src="https://via.placeholder.com/50
+                 "
+                  alt=""
+                />
+                <span class="avatar--indicator"></span>
+              </figure>
+              <figcaption class="contact--content">
+                <h5 class="contact--title">Isaac.A</h5>
+                <h6 class="contact--subtitle">SMM manager</h6>
+                <p class="contact--message">
+                  I don't think we are going to finish ...
+                </p>
+              </figcaption>
+            </div>
+            <div class="update--indicator">
+              <p class="indicator--value"></p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact--info">
+              <figure class="avatar">
+                <img
+                  class="avatar--image"
+                  src="https://via.placeholder.com/50
+                 "
+                  alt=""
+                />
+                <span class="avatar--indicator avatar--indicator__active"></span>
+              </figure>
+              <figcaption class="contact--content">
+                <h5 class="contact--title">Jacob</h5>
+                <h6 class="contact--subtitle">UX designer</h6>
+                <p class="contact--message">
+                  Sorry, friend. I won't do it again.
+                </p>
+              </figcaption>
+            </div>
+            <div class="update--indicator">
+              <p class="indicator--value"></p>
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact--info">
+              <figure class="avatar">
+                <img
+                  class="avatar--image"
+                  src="https://via.placeholder.com/50
+                 "
+                  alt=""
+                />
+                <span class="avatar--indicator"></span>
+              </figure>
+              <figcaption class="contact--content">
+                <h5 class="contact--title">Lisa.O</h5>
+                <h6 class="contact--subtitle">Online one hour ago</h6>
+                <p class="contact--message">Don't worry!</p>
+              </figcaption>
+            </div>
+            <div class="update--indicator">
+              <p class="indicator--value"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat">
+        
+        <div class="current-contact">
+
+          <div class="current-contact--info">
+            <figure class="current-contact--avatar">
+              <img class="current-contact--image" src="https://via.placeholder.com/40" alt="">
+              <span class="current-contact--indicator"></span>
+            </figure>
+            <figcaption class="current-contact--describtion">
+              <h5 class="current-contact--name">Michael.B</h5>
+              <p class="current-contact--status">Online</p>
+            </figcaption>
+          </div>
+          
+          <div class="chat--options">
+            <form class="chat--search" action="">
+              <input class="chat--input" type="text" placeholder="Search">
+              <button class="chat--input--button">
+                <i class="chat--input--icon las la-search"></i>
+              </button>
+            </form> 
+            
+            <div class="chat--buttons">
+              <button class="option-button">
+                <i class="optinon-button--icon las la-microphone "></i>
+              </button>
+            </div>
+            <div class="chat--buttons"> 
+              <button class="option-button">
+                <i class="option-button--icon las la-stop-circle"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="chat--messages">
+
+          <time class="date">July 29, Tuesday</time>
+
+          <div class="outgoing--block">
+
+            <div class="outgoing--info">
+              <time class="message--time">12:25</time>
+            </div>
+
+            <div class="outgoing--messages">
+              <div class="outgoing--message">
+                <p class="outgoing--text">Hello!</p>
+              </div>  
+              <div class="outgoing--message outgoing--audio">
+                <i class=" audio--icon las la-play"></i>
+                <audio class="message--audio" src="https//somepage.com">
+                  <img src="" alt="">
+                </audio>
+                <time class="audio-timing">00:16</time>
+              </div>
+            </div>
+
+            <div class="outgoing--info">
+              <p class="message--status">VIEWED AT</p>
+            </div>
+          </div>
+
+          <div class="incoming--block">
+
+            <div class="incoming--info">
+              <time class="message--time">12:25</time>
+            </div>
+
+            <div class="incoming--messages">
+              <div class="incoming--message">
+                <p class="incoming--text">Hi &#128075</p>
+              </div>
+              <div class="incoming--message incoming--audio">
+                <i class=" audio--icon las la-play"></i>
+                <audio class="message--audio" src="https//somepage.com">
+                  <img src="" alt="">
+                </audio>
+                <time class="audio-timing">00:08</time>
+              </div>
+            </div>           
+          </div>
+
+
+          <div class="outgoing--block">
+
+            <div class="outgoing--info">
+              <time class="message--time">12:29</time>
+            </div>
+
+            <div class="outgoing--messages">
+              <div class="outgoing--message">
+                <p class="outgoing--text">Okay, thank you very much for the speed</p>
+              </div>  
+            </div>
+
+            <div class="outgoing--info">
+              <p class="message--status">VIEWED AT</p>
+            </div>
+          </div>
+
+
+          <div class="incoming--block">
+
+            <div class="incoming--info">
+              <time class="message--time">12:30</time>
+            </div>
+
+            <div class="incoming--messages">
+              <div class="incoming--message">
+                <p class="incoming--text">Catch &#128584</p>
+              </div>
+              <div class="incoming--message incoming--document">
+                <span class="icon--wrapper">
+                  <i class="document--icon las la-file-alt"></i>
+                </span>
+                <div class="document--describtion">
+                  <h6 class="dokument--title">Brief.doc</h6>
+                  <p class="document--wage">146 kb</p>
+                </div>
+              </div>
+            </div>         
+
+          </div>
+
+        </div>
+
+        <div class="current--message">
+          <div class="chat--message--input">
+            <form class="input--form" action="">
+              <input class="message--input" placeholder="Write a message" type="text">
+            </form>
+          </div>
+          <div class="message--functions">
+            <div class="message--function">
+              <button class="message--button message--button__normal button--image">
+                <i class="image--icon las la-image"></i>
+              </button>
+            </div>
+            <div class="message--function">
+              <button class="message--button message--button__normal button--audio">
+                <i class="audio--icon las la-microphone"></i>
+              </button>
+            </div>
+            <div class="message--function">
+              <button class="message--button message--button__blue button--send">
+                <span class="button--wrapper__blue">
+                  <i class="send--icon las la-paper-plane"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <div class="actions__top">
+          <button class="actions--button">
+            <i class="actions--button--icon las la-ellipsis-h"> </i>
+          </button>
+        </div>
+
+        <div class="actions--buttom">
+         
+            <div class="buttons">
+              <button class="actions--button">
+                <i class="actions--button--icon las la-exclamation-circle"></i>
+              </button>
+            </div>
+                    
+            <div class="buttons">
+              <button class="actions--button">
+                <i class="actions--button--icon las la-bell-slash"></i>
+              </button>
+            </div>
+          
+            <div class="buttons">
+              <button class="actions--button">
+                <i class="actions--button--icon las la-trash-alt"></i>
+              </button>
+            </div>
+          
+        </div>
+      </div>
     </div>
   </body>
 </html>
