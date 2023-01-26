@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        display: grid;
+        border: 1px solid black;
+        height: 100vh;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "nav menu menu menu menu"
+                             "cont cont cont cont cont"
+                             "block footer footer footer sidebar";
+      }
+      .item {
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+      }      
+      .nav {
+        background-color: palevioletred;
+        grid-area: nav;
+      }
+      .menu {
+        background-color: aqua;
+        grid-area: menu;
+      }
+      .content {
+        background-color: blueviolet;
+        grid-area: cont;
+      }
+      .block {
+        background-color: dimgray;
+        grid-area: block;
+      }
+      .footer {
+        background-color: gold;
+        grid-area: footer;
+      }
+      .sidebar {
+        background-color: aquamarine;
+        grid-area: sidebar;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="menu item">Menu</div>
+      <div class="nav item">Navigaton</div>
+      <div class="content item">Content</div>
+      <div class="block item">Block</div>
+      <div class="footer item">Footer</div>
+      <div class="sidebar item">Aside</div>
+    </div>
+  </body>
+</html>
