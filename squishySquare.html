@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .field {
+        width: 800px;
+        height: 1000px;
+        background-color:  black;
+        margin: 55px;
+    }
+    .square {
+        width: 100px;
+        aspect-ratio: 1;
+        animation: move 6s ease-in-out 0s infinite;
+    }
+    @keyframes move {
+
+                /* move to the right */
+
+
+        0%{
+            transform: translate(0, 0) scale(1, 1);
+            background-color: #ff00c8;
+        }
+        1%{
+            transform: translate(0, 0) scale(1, 1);
+        }
+        4%{
+            transform: translate(352px, 0) scale(8.04, 1);
+            
+        }
+        5%{
+            transform: translate(701px, 0) scale(1, 1);
+        }
+        6%{
+            transform: translate(725px, 90px) scale(.5, 2.8);
+            background-color: #ff00c8;
+        }
+        
+        6.0000001%{
+            background-color:#40ff00;
+        }
+        7%{
+            transform: translate(690px, -20px) scale(1.2, .6);
+        }
+        9%{
+            transform: translate(710px, 40px) scale(.8, 1.8);
+        }
+        11%{
+            transform: translate(700px, 0) scale(1, 1);
+        }    
+
+
+              /* move down */
+                  
+
+        27%{
+            transform: translate(701px, 452px) scale(.5, 10.04);
+        }
+        32%{
+            transform: translate(701px, 452px) scale(.1, 10.04);
+            
+        }
+        32.5%{
+            transform: translate(602px, 925px) scale(3, .5);
+            background-color:#40ff00;
+            
+        }
+        32.5000001%{
+            background-color: #d400ff;
+        }
+        34%{
+            transform: translate(714px, 825px) scale(.5, 2.5);
+        } 
+        35%{
+            transform: translate(676px, 910px) scale(1.5, .8);
+        }
+        37%{
+            transform: translate(721px, 850px) scale(.6, 2);
+            
+        }
+        39%{
+            transform: translate(701px, 900px);
+        }   
+        
+
+              /* move to the left */
+
+
+              /* rotation sequence 1 */
+        
+        40%{
+            transform: translate(650px, 870px) scale(1, 1) rotate(-45deg);
+            background-color: #de3bff;
+        }
+        42%{
+            transform: translate(600px, 900px) scale(1, 1) rotate(-90deg);
+        }
+        44%{
+            transform: translate(600px, 940px) scale(1.8, .2) rotate(-90deg);
+        }
+        44.0000001%{
+            background-color: #8c11a7;
+        }
+        44.3%{
+            transform: translate(600px, 900px) scale(1, 1) rotate(-90deg);
+            background-color: #de3bff;
+        }
+
+          
+           /* rotation sequence 2*/
+
+
+        47%{
+            transform: translate(550px, 870px) scale(1, 1) rotate(-135deg);
+            background-color: #de3bff;
+        }
+        49%{
+            transform: translate(500px, 900px) scale(1, 1) rotate(-180deg);
+        }
+        51%{
+            transform: translate(500px, 940px) scale(1.8, .2) rotate(-180deg);
+        }
+        51.0000001%{
+            background-color: #8c11a7;
+        }
+        51.3%{
+            transform: translate(500px, 900px) scale(1, 1) rotate(-180deg);
+            background-color: #de3bff;
+        }
+
+          
+           /* rotation sequence 3*/
+             
+
+        54%{
+            transform: translate(450px, 870px) scale(1, 1) rotate(-225deg);
+            background-color: #de3bff;
+        }
+        56%{
+            transform: translate(400px, 900px) scale(1, 1) rotate(-270deg);
+        }
+        58%{
+            transform: translate(400px, 940px) scale(1.8, .2) rotate(-270deg);
+        }
+        58.0000001%{
+            background-color: #8c11a7;
+        }
+        58.3%{
+            transform: translate(400px, 900px) scale(1, 1) rotate(-270deg);
+            background-color: #de3bff;
+        }
+
+
+             /* rotation sequence 4*/
+           
+
+        61%{
+            transform: translate(350px, 870px) scale(1, 1) rotate(-315deg);
+            background-color: #de3bff;
+        }
+        63%{
+            transform: translate(300px, 900px) scale(1, 1) rotate(-360deg);
+        }
+        65%{
+            transform: translate(300px, 940px) scale(1.8, .2) rotate(-360deg);
+        }
+        65.0000001%{
+            background-color: #8c11a7;
+        }
+        65.3%{
+            transform: translate(300px, 900px) scale(1, 1) rotate(-360deg);
+            background-color: #de3bff;
+        }
+
+
+              /* rotation sequence 5*/
+            
+
+
+        68%{
+            transform: translate(250px, 870px) scale(1, 1) rotate(-405deg);
+            background-color: #de3bff;
+        }
+        70%{
+            transform: translate(200px, 900px) scale(1, 1) rotate(-450deg);
+        }
+        72%{
+            transform: translate(200px, 940px) scale(1.8, .2) rotate(-450deg);
+        }
+        72.0000001%{
+            background-color: #8c11a7;
+        }
+        72.3%{
+            transform: translate(200px, 900px) scale(1, 1) rotate(-450deg);
+            background-color: #de3bff;
+        }
+
+
+              /* rotation sequence 6*/
+
+
+        75%{
+            transform: translate(150px, 870px) scale(1, 1) rotate(-495deg);
+            background-color: #de3bff;
+        }
+        77%{
+            transform: translate(100px, 900px) scale(1, 1) rotate(-540deg);
+        }
+        79%{
+            transform: translate(100px, 940px) scale(1.8, .2) rotate(-540deg);
+        }
+        79.0000001%{
+            background-color: #8c11a7;
+        }
+        79.3%{
+            transform: translate(100px, 900px) scale(1, 1) rotate(-540deg);
+            background-color: #de3bff;
+        }
+
+             /* rotation sequence 7*/
+
+
+        81%{
+            transform: translate(50px, 870px) scale(1, 1) rotate(-585deg);
+        }
+        83%{
+            transform: translate(0, 900px) scale(1, 1) rotate(-630deg);
+            background-color: #de3bff;
+        }
+        83.0000001%{
+            transform: translate(0, 900px) rotate(0deg);
+            background-color: #eeff00;
+        }
+        85%{
+            transform: translate(40px, 940px) scale(1.8, .2);
+        }
+        85.3%{
+            transform: translate(0, 900px) scale(1, 1);
+        }
+
+                  
+             /* move up */
+
+
+
+        89%{
+            transform: translate(0, 300) scale(1, 1) skew(0, 1deg);
+            
+        }
+        91%{
+            transform: translate(10px, 25px) scale(1, 1) skew(0, 15deg); 
+        }
+        91.09999999%{
+            background-color: #eeff00; 
+        }
+        91.1%{
+            transform: translate(12px, 18px) scale(1, 1) skew(5deg, 10deg);
+            background-color: #ff00c8;
+        }
+        91.6%{
+            transform: translate(65px, -35px) scale(2.3, .3);
+        }
+        93%{
+            transform: translate(-25px, 39px) scale(.5, 1.8);
+        }
+        95%{
+            transform: translate(40px, -15px) scale(1.8, .7);
+        } 
+        97%{
+            transform: translate(-15px, 25px) scale(.7, 1.5);
+        } 
+        99%{
+            transform: translate(0, 0) scale(1, 1);
+        } 
+        100%{
+            transform: translate(0, 0) scale(1, 1);
+            background-color: #ff00c8;
+        }
+        
+    }
+
+
+</style>
+<body>
+    <div class="field">
+        <div class="square"></div>
+    </div>
+</body>
+</html>
