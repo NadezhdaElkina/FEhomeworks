@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <title>lamps shop</title>
+</head>
+<style>
+   
+  @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'ABeeZee', sans-serif;
+    }
+    .wrapper {
+        padding-left: 312px;
+        padding-right: 312px; 
+    } 
+    .header {
+       height: 90px;
+    }
+    .header--content{
+       display: flex;
+       justify-content: space-between;
+       height: 100%;
+       border-left: 1px solid rgba(196, 196, 196.0.5);
+       border-right: 1px solid rgba(196, 196, 196.0.5);
+    }
+    .social-networks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+    .social-network--item {
+        padding-left: 28px;
+        padding-right: 28px;
+        cursor: pointer;
+        height: 90px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .main {
+        height: 700px;
+        background-color: rgba(79, 191, 165, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu--items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .menu--item, 
+    .menu--item__important {
+        list-style-type: none;
+    }
+    .menu--item--link,
+    .menu--item--link__important {
+        color: #fff;
+        font-size: 18px;
+        font-style: italic;
+        text-decoration: none;
+        line-height: 27px;
+    }
+    .menu--item--link__important {
+        color: black;
+    }
+    .menu--item__important {
+        background-color: rgba(255, 255, 255, 1);
+        height: 42px;
+        width: 194px;
+        margin: 10px, 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main--content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 57px;
+    }
+    .main--image {
+        width: 746px;
+        height: 533px;   
+    }
+    .main--describtion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 416px;
+        height: 266px;
+    }
+    .main--title {
+        color: #fff;
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 150%;
+    }
+    .main--text {
+        color: #fff;
+        font-size: 14px;
+        font-style: italic;
+        text-align: justify;
+        line-height: 21px;
+    }
+    .main--button {
+        background-color: rgba(0, 134, 138, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 18px;
+        font-style: italic;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        margin-top: 40px; 
+        width: 158px;
+        height: 50px;
+    }
+    .offers {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 476px;
+        margin-top: 146px;
+    }
+    .offers--title {
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 400;
+        color: rgba(0, 134, 138, 1);
+        line-height: 72px;
+    } 
+    .offers--items {
+        display: flex;
+        justify-content: space-between;
+        gap: 19px;
+    }
+    .offer--item{
+        display: block;
+        width: 306px;
+        height: 344px;
+    }
+    .offer--images {
+        width: 100%;
+        height: 230px;
+    }
+    .offer--image {
+        width: 100%;
+    }
+    .offer--describtion {
+        display: flex;
+        height: 112px;
+        background-color: rgba(0, 134, 138, 1);
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 0 30px 0 30px;
+    }
+    .describtion--text {
+        color: #fff;
+        font-size: 21px;
+        line-height: 31.5px;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .offer--icon {
+        border: 1px solid #fff;
+        padding: 20px 15px 20px 15px;
+        cursor: pointer;
+    }
+    .offer--sticker {
+        width: 70px;
+        height: 40px;
+        position: relative;
+        top: -210px;
+        left: 30px;   
+    }
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 129px;
+        margin-bottom: 31px;
+    }
+    @media screen and (max-width: 415px) {
+        body{
+            height: 2400px;
+            position: relative;
+        }
+        .wrapper{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .offers .offers--items{
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+        .social-network--item{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header--content{
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .header{
+            margin-top: 10px;
+        }
+        .menu--items{
+            height: 110px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 70px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .menu--item{
+            padding: 4px 0;
+        }
+        .menu--item__important{
+           position: absolute;
+           width: 80%;
+           bottom: 63%;
+           text-align: center;
+        } 
+        .main{
+            height: 540px;
+            position: relative;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .main--image{
+            display: none;
+        }
+        .menu--item--link__important{
+            width: 100%;
+        }
+        .main--describtion{
+            width: 100%;
+            height: 280px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .offers{
+            margin-top: 0;
+        }
+        .offers--title{
+            height: 144px;
+            margin: 40px;
+            font-size: 40px;
+        }
+        .offer--item{
+            width: 100%;
+            position: relative;
+        }
+        .offer--describtion{
+            position: absolute;
+            gap: 42px;
+        }
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 95%;
+          margin-bottom: 10px;
+          margin-top: 20px;
+        }
+        .social-networks{
+            width: 100%;
+            justify-content: space-around;
+        }
+    }    
+
+
+</style>
+<body>
+    <header class="header wrapper">
+        <div class="header--content">
+            <div class="logo">
+                <img src="images/image 1.png" alt="logo">
+            </div>
+            <ul class="social-networks">
+                <li>
+                    <a class="social-network--item" title="vk">
+                        <img src="images/icons/vk.svg" alt="vk">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-network--item" title="youtube">
+                        <img src="images/icons/youtube.svg" alt="youtube">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-network--item" title="facebook">
+                        <img src="images/icons/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-network--item" title="instagram">
+                        <img src="images/icons/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+        </ul>
+        </div>
+    </header>
+    <div class="main wrapper">
+        <menu class="main--menu">
+            <ul class="menu--items">
+                <li class="menu--item">
+                    <a class="menu--item--link" href="">Светильники</a>
+                </li>
+                <li class="menu--item">
+                    <a class="menu--item--link" href="">Лампочки</a>
+                </li>
+                <li class="menu--item">
+                    <a class="menu--item--link" href="">Декоративные</a>
+                </li>
+                <li class="menu--item">
+                    <a class="menu--item--link" href="">Профессиональные</a>
+                </li>
+                <li class="menu--item">
+                    <a class="menu--item--link" href="">Контакты</a>
+                </li>
+                <li class="menu--item__important">
+                    <a class="menu--item--link__important" href="">Связаться</a>
+                </li>
+            </ul>
+        </menu>
+            <div class="main--content">
+        <div class="main--describtion">
+            <h2 class="main--title">Светильники</h2>
+            <p class="main--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda culpa a aspernatur magnam cupiditate perferendis consequatur impedit doloribus, tempore temporibus fugiat modi, amet itaque unde?</p>
+            <button class="main--button">подробнее</button>
+        </div>
+        <img class="main--image" src="images/first-screen__slider.jpg" alt="Lighters">
+            </div>
+    </div>
+    <div class="offers wrapper">
+
+        <h2 class="offers--title">Актуальные спецпредложения</h2>
+
+        <div class="offers--items">
+
+            <div class="offer--item">
+                <figure class="offer--images">
+                    <img class="offer--image" src="images/Rectangle 23.jpg" alt="lighters image">
+                </figure>
+                <figcaption class="offer--describtion">
+                    <p class="describtion--text">
+                        Светильники для дома
+                    </p>
+                    <a class="offer--link">
+                        <img class="offer--icon" src="images/icons/Arrow 1.svg"></img>
+                    </a>
+                </figcaption> 
+            </div>
+
+            <div class="offer--item">
+                <figure class="offer--images">
+                    <img class="offer--image" src="images/Rectangle 23-2.jpg" alt="lighters image">
+                </figure>
+                <figcaption class="offer--describtion">
+                    <p class="describtion--text">
+                        Оборудование профессионалов
+                    </p> 
+                    <a class="offer--link">
+                        <img class="offer--icon" src="images/icons/Arrow 1.svg"></img>
+                    </a>
+                </figcaption> 
+            </div>
+
+            <div class="offer--item offer--item__new">
+                <figure class="offer--images">
+                    <img class="offer--image" src="images/Rectangle 23-3.jpg" alt="lighters image">
+                    <img class="offer--sticker" src="images/icons/sticker.svg" alt="">
+                </figure>
+                <figcaption class="offer--describtion">
+                    <p class="describtion--text">
+                        Декоративные светильники
+                    </p>
+                    <a class="offer--link">
+                        <img class="offer--icon" src="images/icons/Arrow 1.svg"></img>
+                    </a>
+                </figcaption> 
+            </div>
+
+            <div class="offer--item offer--item__new">
+                <figure class="offer--images">
+                    <img class="offer--image" src="images/Rectangle 23-4.jpg" alt="lighters image">
+                    <img class="offer--sticker" src="images/icons/sticker.svg" alt="">
+                </figure>
+                <figcaption class="offer--describtion">
+                    <p class="describtion--text">
+                        Промышленные светильники
+                    </p>
+                    <a class="offer--link">
+                        <img class="offer--icon" src="images/icons/Arrow 1.svg"></img>
+                    </a>
+                </figcaption>
+            </div>
+
+
+        </div>
+    </div>
+    <footer class="footer wrapper">
+        <ul class="social-networks">
+            <li>
+                <a class="social-network--item" title="vk">
+                    <img src="images/icons/vk.svg" alt="vk">
+                </a>
+            </li>
+            <li>
+                <a class="social-network--item" title="youtube">
+                    <img src="images/icons/youtube.svg" alt="youtube">
+                </a>
+            </li>
+            <li>
+                <a class="social-network--item" title="facebook">
+                    <img src="images/icons/facebook.svg" alt="facebook">
+                </a>
+            </li>
+            <li>
+                <a class="social-network--item" title="instagram">
+                    <img src="images/icons/instagram.svg" alt="instagram">
+                </a>
+            </li>
+    </ul>
+    </footer>
+</body>
+</html>
