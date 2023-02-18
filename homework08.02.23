@@ -1,0 +1,40 @@
+const employees = [
+  {
+    id: 1,
+    name: 'Jack',
+    age: 45,
+    salaries: [120000, 130000, 110000, 140000, 150000]
+  }, {
+    id: 2,
+    name: 'Bob',
+    age: 40,
+    salaries: [170000, 130000, 190000, 140000, 160000]
+  }, {
+    id: 3,
+    age: 38,
+    name: 'Tom',
+    salaries: [200000, 230000, 210000, 240000, 250000]
+  }];
+  
+  employees.sort(function(a, b) {
+     return a.age - b.age;
+  });
+  
+  console.log('employees', employees);
+  
+  const filteredEmployees = employees.filter(function(element) {
+  return element.age > 40;
+  });
+  
+  console.log('employees', filteredEmployees);
+  
+  const newEmployees = [];
+  employees.forEach(employees => {
+  newEmployees.push({
+  "id": employees.id,
+  "name": employees.name,
+  "avgsalary": employees.salaries.reduce((p, c) => p + c,0) / employees.salaries.length
+  })
+  });
+  
+  console.log(newEmployees);
