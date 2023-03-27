@@ -80,7 +80,7 @@ console.log(megaChuvaki);*/
 const poemArr = poemString.split(' ');
 
 while(true) {
-  let newPoemWord = prompt('Please, enter new word for poem');
+  let newPoemWord = prompt('Введите новое слово для стихотворения');
   if(newPoemWord === null){
     break;
   }
